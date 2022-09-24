@@ -2,29 +2,8 @@ import React, { useState } from "react"
 import "./Contact.css"
 
 const ContactFrom = () => {
-  const [fname, setFname] = useState("")
-  const [lname, setLname] = useState("")
-  const [phone, setPhone] = useState("")
-  const [email, setEmail] = useState("")
-  const [subject, setSubject] = useState("")
-  const [company, setCompany] = useState("")
-  const [message, setMessage] = useState("")
-
-  const [allValue, setAllValue] = useState([])
-  const formSubmit = (e) => {
-    e.preventDefault()
-
-    const newValue = { fname, lname, phone, email, subject, company, message }
-    setAllValue([...allValue, newValue])
-
-    setFname("")
-    setLname("")
-    setPhone("")
-    setEmail("")
-    setSubject("")
-    setCompany("")
-    setMessage("")
-  }
+ 
+ 
   return (
     <>
       <section className='contact mtop'>
@@ -33,46 +12,46 @@ const ContactFrom = () => {
             <h2>Contact From</h2>
             <p>Fill out the form below, we will get back you soon.</p>
 
-            <form onSubmit={formSubmit}>
+            <form >
               <div className='grid1'>
                 <div className='input'>
                   <span>
                     First Name <label>*</label>
                   </span>
-                  <input type='text' name='fname' value={fname} onChange={(e) => setFname(e.target.value)} required />
+                  <input type='text' name='fname' required />
                 </div>
                 <div className='input'>
                   <span>
                     Last Name <label>*</label>
                   </span>
-                  <input type='text' name='lname' value={lname} onChange={(e) => setLname(e.target.value)} required />
+                  <input type='text' name='lname'  required />
                 </div>
                 <div className='input'>
                   <span>
                     Phone Number <label>*</label>
                   </span>
-                  <input type='number' name='phone' value={phone} onChange={(e) => setPhone(e.target.value)} />
+                  <input type='number' name='phone'  />
                 </div>
                 <div className='input'>
                   <span>
                     Email <label>*</label>
                   </span>
-                  <input type='email' name='email' value={email} onChange={(e) => setEmail(e.target.value)} required />
+                  <input type='email' name='email'  required />
                 </div>
                 <div className='input'>
                   <span>Subject</span>
-                  <input type='text' name='subject' value={subject} onChange={(e) => setSubject(e.target.value)} />
+                  <input type='text' name='subject'  />
                 </div>
                 <div className='input'>
                   <span>Your Company</span>
-                  <input type='text' name='company' value={company} onChange={(e) => setCompany(e.target.value)} />
+                  <input type='text' name='company'  />
                 </div>
               </div>
               <div className='input inputlast'>
                 <span>
                   Write Your Message <label>*</label>
                 </span>
-                <textarea cols='30' rows='10' name='message' value={message} onChange={(e) => setMessage(e.target.value)}></textarea>
+                <textarea cols='30' rows='10' name='message' ></textarea>
               </div>
               <button className='primary-btn'>Submit Now</button>
             </form>
@@ -105,39 +84,7 @@ const ContactFrom = () => {
         </div>
       </section>
 
-      <section className='show-data'>
-        {allValue.map((cureentValue) => {
-          const { fname, lname, phone, email, subject, company, message } = cureentValue
-          return (
-            <>
-              <div className='sign-box'>
-                <h1>Send Successfully</h1>
-                <h3>
-                  First Name : <p>{fname}</p>
-                </h3>
-                <h3>
-                  Last Name : <p>{lname}</p>
-                </h3>
-                <h3>
-                  Contact Number : <p>{phone}</p>
-                </h3>
-                <h3>
-                  Email : <p>{email}</p>
-                </h3>
-                <h3>
-                  Subject : <p>{subject}</p>
-                </h3>
-                <h3>
-                  Company Name: <p>{company}</p>
-                </h3>
-                <h3>
-                  Your Message : <p>{message}</p>
-                </h3>
-              </div>
-            </>
-          )
-        })}
-      </section>
+     
     </>
   )
 }
