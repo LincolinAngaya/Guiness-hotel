@@ -47,6 +47,11 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
+              <Link to='/booking' onClick={closeMobileMenu}>
+                Booking
+              </Link>
+            </li>
+            <li>
               <Link to='/contact' onClick={closeMobileMenu}>
                 Contact Us
               </Link>
@@ -64,6 +69,7 @@ const Navbar = () => {
                 <i class='far fa-chevron-right'></i>Register
               </Link>
             </li>
+            
             <li>
               <Link to='/contact'>
                 <button className='primary-btn'>Request a Quote</button>
