@@ -1,7 +1,40 @@
-import React, { useState } from "react"
+import React from 'react'
+import {useRef} from 'react'
 import "./Contact.css"
 
-const ContactFrom = () => {
+const ContactFrom = (props) => {
+  const firstnameInputRef = useRef();
+    const lastnameInputRef = useRef();
+    const phoneInputRef = useRef();
+    const emailInputRef = useRef();
+    const subjectInputRef = useRef();
+    const companyInputRef = useRef();
+    const messageInputRef = useRef();
+
+
+    function submitHandler(e){
+      e.preventDefault();
+
+       const enteredFirstname = firstnameInputRef.current.value;
+       const enteredLastname = lastnameInputRef.current.value;
+       const enteredPhone = phoneInputRef.current.value;
+       const enteredEmail = emailInputRef.current.value;
+       const enteredSubject = subjectInputRef.current.value;
+       const enteredCompany = companyInputRef .current.value;
+       const enteredMessage = messageInputRef.current.value;
+    
+       const movieDetails={
+           FirstName:enteredFirstname,
+           LastName:enteredLastname,
+           Phone:enteredPhone,
+           Email:enteredEmail,
+           Subject:enteredSubject,
+           Company:enteredCompany,
+           Message:enteredMessage,
+       };
+      
+       props.onAddContact(contactDetails)
+}
  
  
   return (
@@ -12,46 +45,46 @@ const ContactFrom = () => {
             <h2>Contact From</h2>
             <p>Fill out the form below, we will get back you soon.</p>
 
-            <form >
+            <form  onSubmit={submitHandler}>
               <div className='grid1'>
                 <div className='input'>
                   <span>
                     First Name <label>*</label>
                   </span>
-                  <input type='text' name='fname' required />
+                  <input type='text' name='fname' ref={firstnameInputRef} required />
                 </div>
                 <div className='input'>
                   <span>
                     Last Name <label>*</label>
                   </span>
-                  <input type='text' name='lname'  required />
+                  <input type='text' name='lname' ref={lastnameInputRef} required />
                 </div>
                 <div className='input'>
                   <span>
                     Phone Number <label>*</label>
                   </span>
-                  <input type='number' name='phone'  />
+                  <input type='number' name='phone' ref={phoneInputRef}  />
                 </div>
                 <div className='input'>
                   <span>
                     Email <label>*</label>
                   </span>
-                  <input type='email' name='email'  required />
+                  <input type='email' name='email' ref={emailInputRef} required />
                 </div>
                 <div className='input'>
                   <span>Subject</span>
-                  <input type='text' name='subject'  />
+                  <input type='text' name='subject' ref={subjectInputRef}  />
                 </div>
                 <div className='input'>
                   <span>Your Company</span>
-                  <input type='text' name='company'  />
+                  <input type='text' name='company' ref={companyInputRef}  />
                 </div>
               </div>
               <div className='input inputlast'>
                 <span>
                   Write Your Message <label>*</label>
                 </span>
-                <textarea cols='30' rows='10' name='message' ></textarea>
+                <textarea cols='30' rows='10' name='message'ref={messageInputRef} ></textarea>
               </div>
               <button className='primary-btn'>Submit Now</button>
             </form>
