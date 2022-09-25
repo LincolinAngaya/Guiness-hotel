@@ -32,7 +32,7 @@ function Booking(props) {
          CheckOut:enterdateout,
          Adult:enteredadult,
          Children:enteredchildren,
-         room:enteredroom ,
+         Room:enteredroom ,
      };
     
      props.onAddBooking(bookingDetails)
@@ -46,9 +46,9 @@ function Booking(props) {
       <h2>Enjoy Your Holiday</h2>
       <span> Search and Book Hotel</span>
 
-      <form  onSubmit={submitHandler}>
+      <form action=''  onSubmit={submitHandler}>
         <input type='text' placeholder='Name' ref={nameInputRef} required/>
-        <input type='text' placeholder='Email' ref={nameInputRef} required />
+        <input type='email' placeholder='Email' ref={emailInputRef} required />
         <div className='flex_space'>
           <input type='date' placeholder='Check In' ref={dateinInputRef}  required />
           <input type='date' placeholder='Check Out' ref={dateoutInputRef} required />
@@ -61,9 +61,9 @@ function Booking(props) {
         <div className='flex_space'>
         <input type='number' placeholder='Rooms'  ref={roomInputRef} required/>
         <input type='Submit' value='Submit' className='submit' />
-        
         </div>
-      
+        
+        
       </form>
     </div>
   </section>

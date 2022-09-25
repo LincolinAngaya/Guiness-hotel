@@ -63,7 +63,7 @@ const ContactFrom = (props) => {
                   <span>
                     Phone Number <label>*</label>
                   </span>
-                  <input type='number' name='phone' ref={phoneInputRef}  />
+                  <input type='text' name='phone' ref={phoneInputRef} required  />
                 </div>
                 <div className='input'>
                   <span>

@@ -9,7 +9,7 @@ function BookingFrom() {
   const history = useHistory();
 
   function addBookingHandler(bookingDetails){
-    fetch('https://phase-2-project-599c2-default-rtdb.firebaseio.com/movies.json',
+    fetch('https://booking-666fa-default-rtdb.firebaseio.com/bookings.json',
     {
      method:'POST',
      body:JSON.stringify(bookingDetails),
@@ -18,7 +18,7 @@ function BookingFrom() {
      }
     }
     ).then(() => {
-      history.replace('/sign-in');
+      history.replace('/');
     });
 }
   return (

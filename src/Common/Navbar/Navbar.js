@@ -46,11 +46,11 @@ const Navbar = () => {
                 Testimonial
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to='/booking' onClick={closeMobileMenu}>
                 Booking
               </Link>
-            </li>
+            </li> */}
             <li>
               <Link to='/contact' onClick={closeMobileMenu}>
                 Contact Us

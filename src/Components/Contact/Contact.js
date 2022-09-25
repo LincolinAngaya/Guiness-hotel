@@ -8,7 +8,7 @@ const Contact = () => {
   const history = useHistory();
 
   function addMovieHandler(contactDetails){
-    fetch('https://phase-2-project-599c2-default-rtdb.firebaseio.com/movies.json',
+    fetch('https://contact-us-bfcd2-default-rtdb.firebaseio.com/contact.json',
     {
      method:'POST',
      body:JSON.stringify(contactDetails),
