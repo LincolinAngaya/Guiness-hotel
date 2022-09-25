@@ -54,8 +54,8 @@ function Booking(props) {
           <input type='date' placeholder='Check Out' ref={dateoutInputRef} required />
         </div>
         <div className='flex_space'>
-          <input type='number' placeholder='Adult(s)(18+)' ref={enteredadult} required />
-          <input type='number' placeholder='Children(0- 17)' ref={enteredchildren} required />
+          <input type='number' placeholder='Adult(s)(18+)' ref={adultInputRef} required />
+          <input type='number' placeholder='Children(0- 17)' ref={childrenInputRef} required />
       
         </div>
         <div className='flex_space'>
