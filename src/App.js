@@ -18,7 +18,7 @@ import Contact from "./Components/Contact/Contact"
 import Footer from "./Common/footer/Footer"
 import Login from "./Components/login/Login"
 import Register from "./Components/login/Register"
-import Booking from "./Components/login/BookingForm/Booking"
+import BookingFrom from "./Components/login/BookingForm/bookingFrom"
 /*-------------blog------------ */
 
 function App() {
@@ -38,7 +38,7 @@ function App() {
           <Route path='/contact' component={Contact} />
           <Route path='/sign-in' component={Login} />
           <Route path='/Register' component={Register} />
-          <Route path='/booking' component={Booking} />
+          <Route path='/booking' component={BookingFrom} />
         </Switch>
         <Footer />
       </Router>

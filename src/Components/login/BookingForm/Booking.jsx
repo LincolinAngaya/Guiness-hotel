@@ -2,7 +2,7 @@ import React from 'react'
 import {useRef} from 'react'
  import  '../../HomeSection/Home.css'
 
-function Booking() {
+function Booking(props) {
 
   const nameInputRef = useRef();
   const emailInputRef = useRef();
