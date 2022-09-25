@@ -23,7 +23,7 @@ const ContactFrom = (props) => {
        const enteredCompany = companyInputRef .current.value;
        const enteredMessage = messageInputRef.current.value;
     
-       const movieDetails={
+       const contactDetails={
            FirstName:enteredFirstname,
            LastName:enteredLastname,
            Phone:enteredPhone,

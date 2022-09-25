@@ -1,11 +1,55 @@
-
+import React, { useState }from 'react'
+import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom"
 import HeadTitle from "../../Common/HeadTitle/HeadTitle"
 import "./design.css"
 
 const Login = () => {
   
-  
+  const[email, setEmail] = useState("");
+  const[password, setPassword] = useState("");
+  const history = useHistory();
+
+  function handleOnChange(event){
+    if (event.target.name === "email")
+        setEmail(event.target.value);
+    else{
+        setPassword(event.target.value);
+    }
+}
+
+
+
+function handleOnSubmit(event){
+
+  const loginData = {
+      email: email,
+      password: password
+  }
+
+  event.preventDefault()
+  fetch("https://linq-restaraunt.herokuapp.com/login", {
+      method: "POST",
+      headers: {
+          "Content-Type": "application/json"
+      }, 
+      body: JSON.stringify(loginData)
+  })
+  .then(response => response.json())
+  .then(userData => {
+      //console.log(userData)
+      if(Object.values(userData)[0] === "Invalid email or Password"){
+          alert("Invalid email or Password!");
+      }
+      else{
+          alert("Login successful!");
+
+          localStorage.setItem("userData", JSON.stringify(userData));
+          localStorage.setItem("loginStatus", JSON.stringify(true));
+          history.replace("/booking")
+      }  
+  });
+}
   return (
     <>
       <HeadTitle />
@@ -13,9 +57,9 @@ const Login = () => {
         <div className='container'>
           <div className='sign-box'>
             <p>Enter your e-mail and password below to log in to your account and use the benefits of our website.</p>
-            <form action=''>
-              <input type='text' name='email' placeholder='Email' />
-              <input type='password' name='password'  placeholder='Password' />
+            <form action='' onSubmit={handleOnSubmit} >
+              <input type='text' name='email' placeholder='Email' value={email} required onChange={handleOnChange}/>
+              <input type='password' name='password'  placeholder='Password' required id="password"  value={password} onChange={handleOnChange} />
 
               <div className='flex_space'>
                 <div className='flex'>
