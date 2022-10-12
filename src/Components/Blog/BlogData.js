@@ -10,7 +10,7 @@ import blog8 from './singlepage/single-2.jpg'
 const BlogData = [{
         id: 1,
         date: "August 01, 2022",
-        catgeory: "Hotel Business ",
+        catgeory: "Restaraunt Business ",
         title: "The Most Advance Hotel Business Plan",
         cover: `${blog1}`,
         para: "The hotel industry is solely concerned with the provision of guest accommodation and related services.",
@@ -28,7 +28,7 @@ const BlogData = [{
     {
         id: 3,
         date: "August 03, 2022",
-        catgeory: "Hotel Developement",
+        catgeory: "Restaraunt Developement",
         title: "Modern Hotel Design",
         cover: `${blog3}`,
         para: " shaggy Seventies.Sometimes,a design hotel 's modern look has a distinct organic edge, with raw natural materials",
@@ -46,7 +46,7 @@ const BlogData = [{
     {
         id: 5,
         date: "August 05, 2022",
-        catgeory: "Hotel Content Planning",
+        catgeory: "Restaraunt Content Planning",
         title: "Investment Planning",
         cover: `${blog5}`,
         para: "The hotel investment outlook is good.The reason is that the hospitality industry in general is a great investment optionfor generating income and building long - term wealth.People constantly book overnight stays and holidays.",
@@ -64,7 +64,7 @@ const BlogData = [{
     {
         id: 6,
         date: "August 07, 2022",
-        catgeory: "Hotel Strategy",
+        catgeory: "Room Strategy",
         title: "Smart Flexible Hotel Strategy",
         cover: `${blog7}`,
         para: "group bookings, direct bookings, destination marketing, cross promotional sales, guest rewards strategies, revenue management strategies. Other room selling techniques might include upselling, cross-selling, packages, promotions, re-marketing, and local partnerships.",
@@ -82,7 +82,7 @@ const BlogData = [{
     {
         id: 8,
         date: "August 09, 2022",
-        catgeory: "Hotel Writing",
+        catgeory: "room Writing",
         title: "Investment Planning",
         cover: `${blog1}`,
         para: "Some examples of common types of business travel include travelling to a different branch of the same company, travelling to a different location to meet suppliers or business partners, or travelling for a conference or business event.",

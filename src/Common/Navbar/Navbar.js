@@ -82,7 +82,7 @@ const Navbar = () => {
       <header>
         <div className='container flex_space'>
           <div className='logo'>
-            <h1>Guinness Hotel</h1>
+            <h1>Guinness Room Reservation System</h1>
           </div>
 
           <div className='contact flex_space '>
